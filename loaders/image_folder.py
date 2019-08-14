@@ -1,3 +1,4 @@
+%%writefile mannequinchallenge/loaders/image_folder.py
 # Copyright 2019 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,7 +40,7 @@ pa_t = 0.25
 
 
 def make_dataset(list_name):
-    text_file = open(list_name, 'r')
+    text_file = open("/content/mannequinchallenge/"+list_name, 'r')
     images_list = text_file.readlines()
     text_file.close()
     images_list = [os.path.join(os.getcwd(), i) for i in images_list]
